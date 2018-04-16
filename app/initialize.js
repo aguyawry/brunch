@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // do your setup here
-  console.log('Initialized app');
+
+
+	require('nunjucks');
+	nunjucks.configure('views', { autoescape: true });
+	nunjucks.render('index.html', { foo: 'bar' });
+	
+  	console.log('Initialized app');
 });
